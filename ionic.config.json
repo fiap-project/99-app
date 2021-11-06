@@ -1,0 +1,7 @@
+{
+  "name": "99-portage",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
