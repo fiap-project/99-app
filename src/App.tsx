@@ -15,10 +15,13 @@ import '@ionic/react/css/display.css'
 import './theme/variables.css'
 
 import Router from './core/Router'
+import AuthProvider from './contexts/Auth'
 
 const App: React.FC = () => (
   <IonApp>
-    <Router />
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
   </IonApp>
 )
 
