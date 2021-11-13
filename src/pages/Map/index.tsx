@@ -9,7 +9,8 @@ function MapPage() {
 
   const onGetMarkers = useCallback(async (latitude: number, longitude: number) => {
     const { data } = await getRoutesByLatitudeAndLongitude(latitude, longitude)
-    setMakers(data)
+    const parsed = data.map((item: any) => ({ ...item, lat: item.lat, lgn: item.long }))
+    setMakers(parsed)
   }, [])
 
   const onGetCurrentPosition = useCallback(() => {
